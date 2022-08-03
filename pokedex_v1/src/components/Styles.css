@@ -1,0 +1,57 @@
+body {
+}
+
+.pokemon-thumnail-container {
+  margin: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 10px;
+  justify-content: center;
+}
+
+.pokemon-thumbnail {
+  /* display: inline-flex;
+  flex-direction: column; */
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.pokemon-thumbnail .sprite {
+  height: 120px;
+  width: 120px;
+}
+
+/* Thumbnail bg color based on each type of pokemon */
+.rock {
+  background-color: rgb(148, 81, 81);
+}
+.ground {
+  background-color: rgb(189, 160, 122);
+}
+.ghost {
+  background-color: rgb(247, 247, 247);
+}
+.electric {
+  background-color: rgb(255, 255, 161);
+}
+.bug {
+  background-color: #f6d6a7;
+}
+.poison {
+  background-color: #e0a7f6;
+}
+.normal {
+  background-color: #f4f4f4;
+}
+.fairy {
+  background-color: rgba(255, 192, 203, 0.863);
+}
+.fire {
+  background-color: #fbe3df;
+}
+.grass {
+  background-color: #e2f9e1;
+}
+.water {
+  background-color: #e0f1fd;
+}
