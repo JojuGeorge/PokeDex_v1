@@ -14,6 +14,7 @@ body {
   flex-direction: column; */
   border-radius: 3px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .pokemon-thumbnail .sprite {
