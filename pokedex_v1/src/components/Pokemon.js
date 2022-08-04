@@ -31,7 +31,6 @@ export const Pokemon = () => {
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
         setPokemonList((list) => [...list, response.data]);
-        // await pokemonList.sort((a, b) => a.id - b.id);
       });
     };
 
