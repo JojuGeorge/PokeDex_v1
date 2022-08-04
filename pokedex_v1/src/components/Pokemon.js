@@ -31,7 +31,7 @@ export const Pokemon = () => {
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
         setPokemonList((list) => [...list, response.data]);
-        await pokemonList.sort((a, b) => a.id - b.id);
+        // await pokemonList.sort((a, b) => a.id - b.id);
       });
     };
 
@@ -46,15 +46,20 @@ export const Pokemon = () => {
       <h1>PokeDex</h1>
       <div className="pokemon-container">
         <div className="pokemon-thumnail-container">
-          {pokemonList.map((pokemon, index) => (
-            <PokemonThumbnail
-              key={index}
-              id={pokemon.id}
-              name={pokemon.name}
-              sprite={pokemon.sprites.other.dream_world.front_default}
-              type={pokemon.types[0].type.name}
-            ></PokemonThumbnail>
-          ))}
+          {pokemonList.length > 0 ? (
+            (pokemonList.sort((a, b) => a.id - b.id),
+            pokemonList.map((pokemon, index) => (
+              <PokemonThumbnail
+                key={index}
+                id={pokemon.id}
+                name={pokemon.name}
+                sprite={pokemon.sprites.other.dream_world.front_default}
+                type={pokemon.types[0].type.name}
+              ></PokemonThumbnail>
+            )))
+          ) : (
+            <div>Data not found</div>
+          )}
         </div>
       </div>
       <button onClick={getAllPokemon}>Load More</button>
