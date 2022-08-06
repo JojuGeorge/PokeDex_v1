@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { PokemonThumbnail } from "./PokemonThumbnail";
-import "./Styles.css";
+import "./PokemonStyles.css";
 
 export const Pokemon = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -27,10 +27,15 @@ export const Pokemon = () => {
     // Based on above obtained url get all data
     const createPokemonList = (data) => {
       data.forEach(async (pokemon) => {
-        const response = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-        );
-        setPokemonList((list) => [...list, response.data]);
+        try {
+          const response = await axios.get(
+            `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
+          );
+          setPokemonList((list) => [...list, response.data]);
+        } catch (error) {
+          console.log(error.message);
+          setErrorMsg(error.message);
+        }
       });
     };
 

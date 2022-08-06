@@ -2,22 +2,25 @@ body {
 }
 
 .pokemon-thumnail-container {
-  margin: 20px;
-  display: flex;
-  flex-flow: row wrap;
+  margin: 2rem;
+  display: grid;
+  grid-template: repeat(auto-fill, minmax(180px, 1fr)) / repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    );
   gap: 10px 10px;
   justify-content: center;
 }
 
 .pokemon-thumbnail {
   border-radius: 3px;
-  padding: 20px;
+  padding: 8%;
   cursor: pointer;
 }
 
 .pokemon-thumbnail .sprite {
-  height: 120px;
-  width: 120px;
+  height: 70%;
+  width: 70%;
 }
 
 /* Thumbnail bg color based on each type of pokemon */
