@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { usePokeApi } from "../utils/usePokeApi";
 import "./PokemonDetailsStyles.css";
 import axios from "axios";
-import { PokemonThumbnail } from "./PokemonThumbnail";
+import { PokemonEvolutionChain } from "./PokemonEvolutionChain";
 
 export const PokemonDetails = () => {
   const { id } = useParams();
@@ -174,7 +174,9 @@ export const PokemonDetails = () => {
       <div className="pokemon-details-container">
         <div className="grid-item thumbnail">
           {pokemonDetails && (
-            <div>
+            <div
+              className={`thumbnail-enclose ${pokemonDetails.types[0].type.name}`}
+            >
               <h2>#{pokemonDetails.id}</h2>
 
               <img
@@ -252,13 +254,13 @@ export const PokemonDetails = () => {
             {evolutionChainList.length > 0 ? (
               // (pokemonList.sort((a, b) => a.id - b.id),
               evolutionChainList.map((pokemon, index) => (
-                <PokemonThumbnail
+                <PokemonEvolutionChain
                   key={index}
                   id={pokemon.id}
                   name={pokemon.name}
                   sprite={pokemon.sprites.other.dream_world.front_default}
                   type={pokemon.types[0].type.name}
-                ></PokemonThumbnail>
+                ></PokemonEvolutionChain>
               ))
             ) : (
               <div>Data not found</div>

@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./PokemonEvolutionChainStyles.css";
 
-export const PokemonThumbnail = ({ id, name, sprite, type }) => {
+export const PokemonEvolutionChain = ({ id, name, sprite, type }) => {
   const navigate = useNavigate();
   // const history = useHistory();
   // checks if the sprite url is safe
@@ -20,13 +21,13 @@ export const PokemonThumbnail = ({ id, name, sprite, type }) => {
 
   return (
     <div
-      className={`pokemon-thumbnail ${type}`}
+      className={`evo-chain-thumbnail ${type}`}
       onClick={() => showDetails(id, name)}
     >
       <div>#{id}</div>
-      <img src={isSafe(sprite)} className="sprite" />
+      <img src={isSafe(sprite)} className="evo-sprite" />
       <h3>{name}</h3>
-      <p className="type">{type}</p>
+      <p className="poke-type">{type}</p>
     </div>
   );
 };
