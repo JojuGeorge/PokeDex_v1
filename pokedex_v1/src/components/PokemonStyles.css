@@ -4,7 +4,7 @@ body {
 .pokemon-thumnail-container {
   margin: 2rem;
   display: grid;
-  grid-template: repeat(auto-fill, minmax(180px, 250px)) / repeat(
+  grid-template: repeat(auto-fill, minmax(180px, 1fr)) / repeat(
       auto-fill,
       minmax(200px, 1fr)
     );
@@ -24,9 +24,9 @@ body {
   width: 120px;
 }
 
-.type {
+/* .type {
   margin: 0;
-}
+} */
 
 /* Thumbnail bg color based on each type of pokemon */
 .rock {
@@ -61,4 +61,19 @@ body {
 }
 .water {
   background-color: #e0f1fd;
+}
+
+.load-more-btn {
+  background-color: #007ba4;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 20%;
 }

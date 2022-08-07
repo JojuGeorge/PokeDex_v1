@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { usePokeApi } from "../utils/usePokeApi";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import "./PokemonDetailsStyles.css";
 import axios from "axios";
 import { PokemonEvolutionChain } from "./PokemonEvolutionChain";
@@ -11,11 +10,7 @@ export const PokemonDetails = () => {
   const pokemonUrl = "https://pokeapi.co/api/v2/pokemon/";
   let pokemonUrll = "";
 
-  // ----------------------------------------------------------------------
-  // const [pokemonDetails, pokemonSpecies, pokemonEvolutionChain] = usePokeApi(
-  //   pokemonUrl,
-  //   id
-  // );
+  const navigate = useNavigate();
 
   const [pokemonDetails, setPokemonDetails] = useState();
   const [pokemonSpecies, setPokemonSpecies] = useState();
@@ -67,12 +62,11 @@ export const PokemonDetails = () => {
 
   useEffect(() => {
     if (id) {
-      pokemonUrll = pokemonUrl + id;
+      pokemonUrll = pokemonUrl + idd;
       getPokemonDetails();
+      console.log(pokemonUrll);
     }
   }, [idd]);
-
-  // ----------------------------------------------------------------------
 
   const [bio, setBio] = useState("");
   const [evolutionChainName, setEvolutionChainName] = useState([]);
@@ -87,12 +81,12 @@ export const PokemonDetails = () => {
 
     setEvolutionChainName((list) => [...list, chain.species.name]);
 
-    chain.evolves_to.length > 0 &&
+    chain?.evolves_to.length > 0 &&
       setEvolutionChainName((list) => [
         ...list,
         chain.evolves_to[0].species.name,
       ]);
-    chain.evolves_to[0].evolves_to.length > 0 &&
+    chain?.evolves_to[0]?.evolves_to.length > 0 &&
       setEvolutionChainName((list) => [
         ...list,
         chain.evolves_to[0].evolves_to[0].species.name,
@@ -166,10 +160,11 @@ export const PokemonDetails = () => {
   return (
     <div className="details-container">
       {
-        console.log(pokemonDetails)
+        // console.log(pokemonDetails)
         // console.log(pokemonSpecies),
         // console.log(pokemonEvolutionChain))
         // console.log(evolutionChainList)
+        // console.log(location.state?.identifier)
       }
       <div className="pokemon-details-container">
         <div className="grid-item thumbnail">

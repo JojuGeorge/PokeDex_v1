@@ -49,8 +49,8 @@ h4 {
 .thumbnail-enclose {
   border-radius: 10px;
   display: table-cell;
-  height: 430px;
-  width: 430px;
+  height: 440px;
+  width: 440px;
 }
 
 .bio {
@@ -92,7 +92,7 @@ h4 {
 
 .stats-table {
   table-layout: auto;
-  width: 100%;
+  width: 80%;
 }
 
 /* Thumbnail bg color based on each type of pokemon */

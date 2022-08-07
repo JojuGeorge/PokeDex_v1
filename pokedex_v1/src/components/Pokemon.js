@@ -6,7 +6,7 @@ import "./PokemonStyles.css";
 export const Pokemon = () => {
   const [pokemonList, setPokemonList] = useState([]);
   const [loadMoreUrl, setLoadMoreUrl] = useState(
-    "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
+    "https://pokeapi.co/api/v2/pokemon/?limit=50&offset=0"
   );
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -66,7 +66,9 @@ export const Pokemon = () => {
           )}
         </div>
       </div>
-      <button onClick={getAllPokemon}>Load More</button>
+      <button className="load-more-btn" onClick={getAllPokemon}>
+        Load More
+      </button>
     </div>
   );
 };
