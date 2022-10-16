@@ -51,6 +51,7 @@ h4 {
   display: table-cell;
   height: 440px;
   width: 440px;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
 }
 
 .bio {

@@ -3,6 +3,7 @@
   padding: 8%;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
 }
 
 .evo-sprite {
@@ -47,4 +48,12 @@
 }
 .water {
   background-color: #e0f1fd;
+}
+.psychic,
+.fighting,
+.dragon,
+.dark,
+.steel,
+.ice {
+  background-color: white;
 }

@@ -7,12 +7,13 @@ export const Navbar = () => {
       <NavLink to="/" className="home">
         PokeDex
       </NavLink>
+
       <div className="menu-container">
         <NavLink to="/" className="link">
           Home
         </NavLink>
         <a
-          href="https://github.com/JojuGeorge/PokeDex_v1"
+          href="https://github.com/JojuGeorge/PokeDex_v1/tree/main/pokedex_v1"
           className="link"
           target="_blank"
           rel="noopener noreferrer"
