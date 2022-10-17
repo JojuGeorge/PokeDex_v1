@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./PokemonThumbnailStyle.css";
 
 export const PokemonThumbnail = ({ id, name, sprite, type }) => {
   const navigate = useNavigate();

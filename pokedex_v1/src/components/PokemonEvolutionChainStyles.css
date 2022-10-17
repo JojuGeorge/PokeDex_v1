@@ -57,3 +57,12 @@
 .ice {
   background-color: white;
 }
+
+.evo-sprite {
+  transition: all ease 500ms;
+}
+
+.evo-sprite:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
