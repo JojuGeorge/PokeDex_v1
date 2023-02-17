@@ -13,7 +13,7 @@ export const Navbar = () => {
           Home
         </NavLink>
         <a
-          href="https://github.com/JojuGeorge/PokeDex_v1/tree/main/pokedex_v1"
+          href="https://github.com/JojuGeorge/PokeDex_v1"
           className="link"
           target="_blank"
           rel="noopener noreferrer"

@@ -11,6 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Pokemon />} />
+        <Route path="/PokeDex_v1" element={<Pokemon />} />
         <Route path="/details/:id" element={<PokemonDetails />} />
       </Routes>
     </div>
