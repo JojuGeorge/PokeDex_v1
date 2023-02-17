@@ -1,4 +1,13 @@
 {
+  "homepage": "https://JojuGeorge.github.io/PokeDex_v1",
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
